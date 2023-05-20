@@ -1,1 +1,1 @@
-# cs61c-labs
+# su20-lab

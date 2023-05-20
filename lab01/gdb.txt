@@ -1,0 +1,9 @@
+1. $ set args 1 
+2. $ b
+3. $ n
+4. $ s
+5. using s or n command 
+6. using p args
+7. display args
+8. display {a, b}
+9. quit
