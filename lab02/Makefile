@@ -15,11 +15,17 @@ endif
 BIT_OPS_OBJS = bit_ops.o test_bit_ops.o
 BIT_OPS_PROG = bit_ops
 
-LFSR_OBJS = lfsr.o test_lfsr.o
+LFSR_OBJS = lfsr.o test_lfsr.o bit_ops.o
 LFSR_PROG = lfsr
 
-VECTOR_OBJS=vector.o vector_test.o
-VECTOR_PROG=vector_test
+LINK_LISTS_OBJS = list.o test_list.o
+LINK_LISTS_PROG = list
+
+VECTOR_OBJS = vector.o vector_test.o
+VECTOR_PROG = vector_test
+
+
+
 
 BINARIES=$(VECTOR_PROG) $(BIT_OPS_PROG) $(LFSR_PROG)
 
@@ -31,6 +37,13 @@ $(BIT_OPS_PROG): $(BIT_OPS_OBJS)
 $(LFSR_PROG): $(LFSR_OBJS)
 	$(CC) $(CFLAGS) -g -o $(LFSR_PROG) $(LFSR_OBJS) $(LDFLAGS)
 
+$(LINK_LISTS_PROG): $(LINK_LISTS_OBJS)
+	$(CC) $(CFLAGS) -g -o $(LINK_LISTS_PROG) $(LINK_LISTS_OBJS)
+
+$(VECTOR_PROG): $(VECTOR_OBJS)
+	$(CC) $(CFLAGS) -g -o $(VECTOR_PROG) $(VECTOR_OBJS)
+
+list.c: list.h
 lfsr.c: lfsr.h
 test_lfsr.c: lfsr.h
 
