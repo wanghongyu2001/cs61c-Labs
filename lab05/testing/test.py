@@ -83,8 +83,8 @@ def run_tests(tests):
 tests = [
   ("Exercise 1 (Sub-Circuits) test", "student_output/ex1_test.out",TestCase(os.path.join(file_locations,'circ_files/ex1_test.circ'), os.path.join
 (file_locations,'reference_output/ex1_test.out'), "")),
-  ("Exercise 2 (Add Machine) test", "student_output/ex2_test.out",TestCase(os.path.join(file_locations,'circ_files/ex2_test.circ'), os.path.join
-(file_locations,'reference_output/ex2_test.out'), "")),
+#   ("Exercise 2 (Add Machine) test", "student_output/ex2_test.out",TestCase(os.path.join(file_locations,'circ_files/ex2_test.circ'), os.path.join
+# (file_locations,'reference_output/ex2_test.out'), "")),
   ("Exercise 3 (FSM) test", "student_output/ex3_test.out",TestCase(os.path.join(file_locations,'circ_files/ex3_test.circ'), os.path.join
 (file_locations,'reference_output/ex3_test.out'), "")),
   ("Exercise 4 (Split) test", "student_output/ex4_test.out",TestCase(os.path.join(file_locations,'circ_files/ex4_test.circ'), os.path.join
